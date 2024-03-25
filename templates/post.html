@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}HOME{% endblock title %}
+
+{% block body %}
+<style>
+    .feature{
+        margin-top: 25px;
+        width: 85%;
+        border: 2px solid black;
+    }
+</style>
+{% for post  in allpost %}
+<div class="features"> 
+  <div class="feature col">
+      <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+        <svg class="bi" width="1em" height="1em"><use xlink:href="#collection"></use></svg>
+      </div>
+      <h3 class="fs-2 text-body-emphasis">Title- {{post.tittle}}</h3>
+      <h2 class="fs-2 text-body-emphasis">Author- {{post.author}}</h2>
+      <p>Description- {{post.description}}</p>
+      {{post.date}}
+    
+    </div>
+    
+</div>
+
+{% endfor %}
+
+
+
+
+
+{% endblock body %}

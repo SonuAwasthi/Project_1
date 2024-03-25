@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+
+{% block body %}
+
+<link rel="stylesheet" href="/static/login.css">
+
+
+<div class="form-contain">
+    <form action="" method="post">
+        {% csrf_token %}
+        <div class="lohgin">
+            <label for="username">UserName</label>
+            <input type="text" class="user-login" name="username">
+
+            <label for="password">Password</label>
+            <input type="password" class="user-login" name="password">
+
+            <button type="submit" class="submit-user">Submit</button>
+            <a href="/create_account"><h4><u>Create account</u></h4></a>
+        </div>
+    </form>
+    
+</div>
+
+{% endblock body %}

@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+
+
+{% block body %}
+<link rel="stylesheet" href="/static/registraion.css">
+
+
+
+
+<div class="form-container">
+    <form action="" method="post">  
+        {% csrf_token %} 
+        <div class="f-user">
+            <label for="username">UserName</label>
+            <input type="text" class="inputuser" name="username">
+
+            <label for="gmail">Gmail</label>
+            <input type="gmail" class="inputuser" name="gmail">
+
+            <label for="password">Password</label>
+            <input type="password" class="inputuser" name="password">
+
+            <label for="password2">Confirm Password</label>
+            <input type="password" class="inputuser" name="password2">
+    
+            <button class="botton" type="submit" >Submit</button>
+
+            <div class="acc-creater">
+                <a href="/loginp"><h4><u>Already have a account</u></h4></a>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+
+{% endblock body %}
